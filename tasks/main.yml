@@ -42,10 +42,10 @@
 - import_tasks: install-code-server.yml
   when: code_server_major|int >= 3
 
-- import_tasks: install-code-server-service.yml
-
 - name: Configure code-server
   include_tasks: configure-code-server.yml
+
+- import_tasks: install-code-server-service.yml
 
 - name: Configure service
   set_fact:
